@@ -1,0 +1,17 @@
+<%= form_for @list do |f| %>
+  <% if @list.errors.any?%>
+    <h2><%= pluralize(@list.errors.count, "error") %> prevented this list from saving:</h2>
+    <ul>
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <%end%>
+    </ul>
+  <%end%>
+
+  <div class="form-group ">
+    <%= f.label :name %>
+    <%= f.text_field :name, {class: 'form-control'} %>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+<%end%>
