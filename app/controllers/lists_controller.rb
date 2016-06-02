@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
   before_action :find_list, only: [:show, :edit, :update, :destroy]
   def index
-    @list = List.all.order("created_at desc")
+    @list = List.all.order("created_at asc")
   end
 
   def new

@@ -1,7 +1,13 @@
-<% @list.each do |list| %>
-  <div class="col-md-4 posts content-space">
-    <h1><%= link_to list.name, list %></h1>
-    <p> <%= list.barber.name %></p>
-    <hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 list center-block">
+      <% @list.each do |list| %>
+        <div class="col-md-6 names panel-default panel">
+          <h1><%= link_to list.name, list %></h1>
+          <p><strong>Barber:</strong> <%= list.barber.name %></p>
+          <hr>
+        </div>
+      <%end%>
+    </div>
   </div>
-<%end%>
+</div>

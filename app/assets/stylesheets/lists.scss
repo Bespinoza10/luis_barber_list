@@ -1,3 +1,29 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #fff;
+$black: #000;
+$light-grey: #ededed;
+$medium-grey: #8c8c8c;
+$charcoal: #2a2a2a;
+$blue: #006eff;
+$red: #df1c1c;
+
+.list{
+  .panel{
+    border: none;
+    border-radius: 0;
+  }
+  .names{
+    box-shadow: 5px 17px 10px -10px $medium-grey;
+    border-left: 8px solid $light-grey;
+    h1 > a{
+      color: $charcoal;
+    } .names strong, p{
+      font-style: italic;
+      color: $medium-grey;
+      letter-spacing: 1px;
+    }
+  }
+}

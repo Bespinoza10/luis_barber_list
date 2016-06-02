@@ -16,8 +16,17 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$white: #fff;
+$black: #000;
+$light-grey: #ededed;
+$medium-grey: #8c8c8c;
+$charcoal: #2a2a2a;
+$blue: #006eff;
+$red: #df1c1c;
 
-
+body{
+  background: $light-grey;
+}
 .center-block{
   margin: 0 auto;
   float: none;
