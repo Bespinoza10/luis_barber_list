@@ -23,9 +23,14 @@ $red: #df1c1c;
   .names{
     box-shadow: 5px 17px 10px -10px $medium-grey;
     border-left: 8px solid $light-grey;
+    transition: all ease-in-out 300ms;
     h1 > a{
       color: $charcoal;
-    } .names strong, p{
+    }&:hover{
+      box-shadow: 5px 27px 25px -20px $medium-grey;
+      transform: translate(0px, -10px);
+      transition: all ease-in-out 300ms;
+    }.names strong, p{
       font-style: italic;
       color: $medium-grey;
       letter-spacing: 1px;
