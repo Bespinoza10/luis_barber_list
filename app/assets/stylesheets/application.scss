@@ -40,3 +40,24 @@ body{
   border-radius: 0;
   border: none;
 }
+
+.form-control{
+  border: none;
+  border-radius: 0;
+  box-shadow: 5px 17px 10px -15px $medium-grey;
+
+  &:focus{
+    box-shadow: 5px 17px 10px -15px $blue;
+    transition: all ease-in-out 300ms;
+  }
+}
+.classic-select select{
+  width: 150px;
+  height: 30px;
+  padding: 0px 10px;
+  border-radius: 0;
+  outline: 4px solid $charcoal;
+  outline-offset: -3px;
+  background: $charcoal;
+  color: #fff;
+}

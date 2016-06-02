@@ -57,5 +57,31 @@ $red: #df1c1c;
       border: 2px solid $charcoal;
       transition: all ease-in-out 300ms;
     }
+  }.btn-add{
+    background: none;
+    border: 2px solid $charcoal;
+    color: $charcoal;
+    padding: 15px 15px;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: $charcoal;
+      color: $white;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
   }
+}
+
+.btn-add-to-list{
+  background: none;
+  border: 2px solid $charcoal;
+  color: $charcoal;
+  padding: 5px 15px;
+  transition: all ease-in-out 300ms;
+}
+.btn-add-to-list:hover{
+  background: $charcoal;
+  color: $white;
+  border: 2px solid $charcoal;
+  transition: all ease-in-out 300ms;
 }
