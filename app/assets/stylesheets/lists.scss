@@ -35,5 +35,27 @@ $red: #df1c1c;
       color: $medium-grey;
       letter-spacing: 1px;
     }
+  }.btn-edit{
+    background: none;
+    border: 2px solid $charcoal;
+    color: $charcoal;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: $charcoal;
+      color: $white;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
+  }.btn-delete{
+    background: $charcoal;
+    border: 2px solid $charcoal;
+    color: $white;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: none;
+      color: $red;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
   }
 }
