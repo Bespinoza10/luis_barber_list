@@ -1,6 +1,7 @@
 <% @list.each do |list| %>
   <div class="col-md-4 posts content-space">
     <h1><%= link_to list.name, list %></h1>
+    <p> <%= list.barber.name %></p>
     <hr>
   </div>
 <%end%>
