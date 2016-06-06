@@ -28,7 +28,7 @@ class ListsController < ApplicationController
 
   def update
     if @list.update list_params
-      redirect_to @list, notice: "Yai saved"
+      redirect_to @list, notice: "#{@list.name}, has been updated!"
     else
       render 'edit'
     end
