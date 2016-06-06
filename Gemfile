@@ -34,6 +34,9 @@ gem 'wow-rails', '~> 0.0.1'
 # URL NAME
 gem 'friendly_id', '~> 5.1'
 
+# Auth LOGIN
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
