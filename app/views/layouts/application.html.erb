@@ -9,10 +9,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <%end%>
   <div class="container">
     <div class="row">
       <div class="col-md-10 list center-block">
-        <img src="/assets/logo-list.png" alt="" class="logo-img center-block">
+        <a href="<%= new_user_session_path%>"><img src="/assets/logo-list.png" alt="" class="logo-img center-block"></a>
       </div>
     </div>
   </div>
