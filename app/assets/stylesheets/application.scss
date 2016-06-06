@@ -16,8 +16,17 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$white: #fff;
+$black: #000;
+$light-grey: #ededed;
+$medium-grey: #8c8c8c;
+$charcoal: #2a2a2a;
+$blue: #006eff;
+$red: #df1c1c;
 
-
+body{
+  background: $light-grey;
+}
 .center-block{
   margin: 0 auto;
   float: none;
@@ -25,4 +34,30 @@
 
 .center-text{
   text-align: center;
+}
+
+.btn{
+  border-radius: 0;
+  border: none;
+}
+
+.form-control{
+  border: none;
+  border-radius: 0;
+  box-shadow: 5px 17px 10px -15px $medium-grey;
+
+  &:focus{
+    box-shadow: 5px 17px 10px -15px $blue;
+    transition: all ease-in-out 300ms;
+  }
+}
+.classic-select select{
+  width: 150px;
+  height: 30px;
+  padding: 0px 10px;
+  border-radius: 0;
+  outline: 4px solid $charcoal;
+  outline-offset: -3px;
+  background: $charcoal;
+  color: #fff;
 }

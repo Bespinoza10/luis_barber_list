@@ -13,5 +13,16 @@
     <%= f.text_field :name, {class: 'form-control'} %>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="form-group">
+    <%= f.label "Choose a Barber" %>
+    <!-- :include_blank => true
+      insert this to have the option of leaving it blank
+    -->
+    <div class="classic-select">
+      <%= f.collection_select :barber_id, Barber.all, :id, :name %>
+    </div>
+
+  </div>
+  <br>
+  <button type="submit" class="btn-add-to-list">Submit</button>
 <%end%>

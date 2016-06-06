@@ -1,0 +1,17 @@
+<%= form_for @barber do |f| %>
+  <% if @barber.errors.any?%>
+    <h2><%= pluralize(@barber.errors.count, "error") %> prevented this barber from saving:</h2>
+    <ul>
+      <% @barber.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <%end%>
+    </ul>
+  <%end%>
+
+  <div class="form-group ">
+    <%= f.label :name %>
+    <%= f.text_field :name, {class: 'form-control'} %>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+<%end%>

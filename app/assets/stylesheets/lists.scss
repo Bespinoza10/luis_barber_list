@@ -1,3 +1,87 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #fff;
+$black: #000;
+$light-grey: #ededed;
+$medium-grey: #8c8c8c;
+$charcoal: #2a2a2a;
+$blue: #006eff;
+$red: #df1c1c;
+
+
+.logo-img{
+  max-width: 50%;
+}
+
+.list{
+  .panel{
+    border: none;
+    border-radius: 0;
+  }
+  .names{
+    box-shadow: 5px 17px 10px -10px $medium-grey;
+    border-left: 8px solid $light-grey;
+    transition: all ease-in-out 300ms;
+    h1 > a{
+      color: $charcoal;
+    }&:hover{
+      box-shadow: 5px 27px 25px -20px $medium-grey;
+      transform: translate(0px, -10px);
+      transition: all ease-in-out 300ms;
+    }.names strong, p{
+      font-style: italic;
+      color: $medium-grey;
+      letter-spacing: 1px;
+    }
+  }.btn-edit{
+    background: none;
+    border: 2px solid $charcoal;
+    color: $charcoal;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: $charcoal;
+      color: $white;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
+  }.btn-delete{
+    background: $charcoal;
+    border: 2px solid $charcoal;
+    color: $white;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: none;
+      color: $red;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
+  }.btn-add{
+    background: none;
+    border: 2px solid $charcoal;
+    color: $charcoal;
+    padding: 15px 15px;
+    transition: all ease-in-out 300ms;
+    &:hover{
+      background: $charcoal;
+      color: $white;
+      border: 2px solid $charcoal;
+      transition: all ease-in-out 300ms;
+    }
+  }
+}
+
+.btn-add-to-list{
+  background: none;
+  border: 2px solid $charcoal;
+  color: $charcoal;
+  padding: 5px 15px;
+  transition: all ease-in-out 300ms;
+}
+.btn-add-to-list:hover{
+  background: $charcoal;
+  color: $white;
+  border: 2px solid $charcoal;
+  transition: all ease-in-out 300ms;
+}
