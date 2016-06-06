@@ -36,7 +36,7 @@ class BarbersController < ApplicationController
 
   def destroy
     @barber.destroy
-    redirect_to root_path
+    redirect_to barbers_path
   end
 
   private

@@ -1,1 +1,16 @@
-<%= @barber.name %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 list center-block">
+      <img src="/assets/logo-list.png" alt="" class="logo-img center-block">
+      <br>
+      <div class="col-md-6 center-block names panel-default panel">
+        <h1><%= @barber.name %></h1>
+        <hr>
+      </div>
+      <div class="col-md-2 center-block">
+        <%= link_to "edit", edit_barber_path(@barber), class: "btn btn-default btn-edit"%>
+        <%= link_to "Delete", barber_path(@barber), method: :delete, data: {confirm: "Are you sure you want to delete this Barber?"}, class: "btn btn-default btn-delete"%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 list center-block">
+      <img src="/assets/logo-list.png" alt="" class="logo-img center-block">
+      <br>
+      <% @barber.each do |barber| %>
+        <div class="col-md-6 names panel-default panel">
+          <h1><%= link_to barber.name, barber %></h1>
+          <hr>
+        </div>
+      <%end%>
+      <div class="col-md-2 center-block">
+        <%= link_to "Add New Barber", new_barber_path, class: "btn-add btn"%>
+      </div>
+    </div>
+  </div>
+</div>
