@@ -9,18 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-  <%end%>
   <div class="container">
     <div class="row">
       <div class="col-md-10 list center-block">
         <a href="<%= new_user_session_path%>"><img src="/assets/logo-list.png" alt="" class="logo-img center-block"></a>
       </div>
     </div>
-    <% if user_signed_in? %>
     <div class="row">
       <div class="col-md-10 center-block">
+        <% if user_signed_in? %>
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -49,13 +46,19 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
+        <%end%>
+        <% if notice %>
+          <div id="notice-wrapper">
+            <p class="notice"><%= notice %></p>
+          </div>
+        <%elsif alert%>
+          <div id="notice-wrapper">
+            <p class="alert"><%= alert %></p>
+          </div>
+        <%end%>
       </div>
     </div>
-    <%end%>
   </div>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <%= yield %>
 
 </body>

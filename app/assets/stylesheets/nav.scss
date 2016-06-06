@@ -3,8 +3,25 @@ $black: #000;
 $light-grey: #ededed;
 $medium-grey: #8c8c8c;
 $charcoal: #2a2a2a;
-$blue: #006eff;
+$blue: #6cb9ff;
 $red: #df1c1c;
+
+#notice-wrapper{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1050;
+  background: $blue;
+  p{
+    padding: 2rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+}
 
 .navbar{
   background: $charcoal;

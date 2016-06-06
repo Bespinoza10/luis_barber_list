@@ -12,7 +12,7 @@ class ListsController < ApplicationController
     @list = List.new list_params
 
     if @list.save
-      redirect_to @list, notice: "Saved!"
+      redirect_to root_path, notice: "#{@list.name}, You have been added to the List!"
     else
       render 'new', notice: "Oh No! Not Saved!"
     end
@@ -36,7 +36,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "#{@list.name}, has been deleted!"
   end
 
   private
