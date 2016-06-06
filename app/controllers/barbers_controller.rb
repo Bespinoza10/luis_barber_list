@@ -1,5 +1,6 @@
 class BarbersController < ApplicationController
   before_action :find_barber, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   def index
     @barber = Barber.all.order("created_at desc")
   end
@@ -12,9 +13,9 @@ class BarbersController < ApplicationController
     @barber = Barber.new barber_params
 
     if @barber.save
-      redirect_to @barber, notice: "Saved!"
+      redirect_to @barber, notice: "#{@barber.name} has been saved!"
     else
-      render 'new', notice: "Oh No! Not Saved!"
+      render 'new', notice: "Oh No!#{@barber.name} couldn't save!"
     end
   end
 
@@ -28,7 +29,7 @@ class BarbersController < ApplicationController
 
   def update
     if @barber.update barber_params
-      redirect_to @barber, notice: "Yai saved"
+      redirect_to @barber, notice: "#{@barber.name} has been updated"
     else
       render 'edit'
     end
