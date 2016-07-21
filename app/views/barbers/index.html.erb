@@ -4,6 +4,9 @@
       <% @barber.each do |barber| %>
         <div class="col-md-6 names panel-default panel">
           <h1><%= link_to barber.name, barber %></h1>
+          <% for list in barber.lists %>
+              <h4><%= link_to list.name, list %></h4>
+          <% end %>
           <hr>
         </div>
       <%end%>

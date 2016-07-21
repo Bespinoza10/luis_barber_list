@@ -3,6 +3,9 @@
     <div class="col-md-10 list center-block">
       <div class="col-md-6 center-block names panel-default panel">
         <h1><%= @barber.name %></h1>
+        <% for list in @barber.lists %>
+            <h4><%= link_to list.name, list %></h4>
+        <% end %>
         <hr>
       </div>
       <div class="col-md-2 center-block">

@@ -20,7 +20,7 @@ class BarbersController < ApplicationController
   end
 
   def show
-
+    
   end
 
   def edit
