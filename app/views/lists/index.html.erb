@@ -1,8 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-10 list center-block">
+    <div class="col-md-2 list center-block">
+      <%= link_to "Add Me to the List", new_list_path, class: "btn-add btn"%>
+    </div>
+    <br>
+    <div id="lists" class="transitions-enabled col-md-10 list center-block">
       <% @barber.each do |barber| %>
-        <div class="col-md-6 names panel-default panel">
+        <div class="col-md-6 names panel-default panel" style="float:left;">
           <h1><%= barber.name %></h1>
           <% for list in barber.lists %>
               <h4><%= link_to list.name, list %></h4>
@@ -10,9 +14,6 @@
           <hr>
         </div>
       <%end%>
-      <div class="col-md-2 center-block">
-        <%= link_to "Add Me to the List", new_list_path, class: "btn-add btn"%>
-      </div>
     </div>
   </div>
 </div>
