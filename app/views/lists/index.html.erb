@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 list center-block">
-      <% @list.each do |list| %>
+      <% @barber.each do |barber| %>
         <div class="col-md-6 names panel-default panel">
-          <h1><%= link_to list.name, list %></h1>
-          <p><strong>Barber:</strong> <%= list.barber.name %></p>
+          <h1><%= barber.name %></h1>
+          <% for list in barber.lists %>
+              <h4><%= link_to list.name, list %></h4>
+          <% end %>
           <hr>
         </div>
       <%end%>
