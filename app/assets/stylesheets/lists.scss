@@ -11,6 +11,27 @@ $blue: #006eff;
 $red: #df1c1c;
 
 
+#lists{
+ margin: 0 auto;
+ width: 83.33333333%;
+ position: relative;
+ min-height: 1px;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+div.boxy{
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  @media (min-width: 800px) {
+    width: 50%;
+  }
+}
+
 .logo-img{
   max-width: 50%;
 }

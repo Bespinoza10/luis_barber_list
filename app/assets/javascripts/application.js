@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require masonry/jquery.masonry
 //= require masonry/modernizr-transitions
@@ -25,8 +26,4 @@ $(document).ready(function(){
       $(this).remove();
     })
   }, 3000);
-  $('#lists').masonry({
-    itemSelector: 'div.col-md-6',
-    columnWidth: 'div.col-md-6'
-  });
 });
