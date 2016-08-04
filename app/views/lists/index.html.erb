@@ -10,6 +10,7 @@
 
         <div class="boxy names panel-default panel">
           <h1><%= barber.name %></h1>
+          <hr>
           <% for list in barber.lists %>
               <h4><%= link_to list.name, list %></h4>
           <% end %>
